@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
 :root{
-    --yellow:rgb(250, 228, 36);
+    --yellow:#e6a6a6;
 }
-
+@keyframes example {
+    from {background-color: rgb(122, 114, 159);}
+    to {background-color: rgb(65, 58, 58);}
+  }
 *{
     font-family: 'Nunito', sans-serif;
     margin:0; padding:0;
@@ -18,6 +21,7 @@
     background:var(--yellow);
     color:#3d3131;
 }
+
 
 html{
     font-size: 62.5%;
@@ -38,10 +42,24 @@ html::-webkit-scrollbar-thumb{
 
 body{
     background:#111;
+    
     overflow-x: hidden;
     padding-left: 35rem;
 }
-
+#chat{
+    position: fixed;
+    height:7rem;
+    width:7rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    bottom: 2px;
+    right: 2px;
+    
+}
+#chat:hover{
+    transform: scale(1.2);
+}
 section{
     min-height: 100vh;
     padding:1rem;
@@ -85,31 +103,57 @@ header{
     z-index: 1000;
     height:100%;
     width:35rem;
-    background:#1a1a1a;
+    background:#e0bfbf;
+    
+     /* background-image: url(backgrd1.jpg); */
+     background-blend-mode: darken;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
     text-align: center;
 }
-
+@keyframes slidein {
+    from {
+        border-left-color:var(--yellow);
+        border-bottom-color:var(--yellow) ;
+        border-right-color:rgb(65, 58, 58) ;
+        border-top-color:rgb(65, 58, 58) ;
+    }
+  
+    to {
+        border-left-color:rgb(65, 58, 58) ;
+        border-bottom-color:rgb(65, 58, 58) ;
+        border-right-color:var(--yellow);
+        border-top-color:var(--yellow);
+    }
+  }
 header .user img{
     height:19rem;
     width:19rem;
     border-radius: 50%;
+    
     object-fit: cover;
     margin-bottom: 1rem;
+    margin-top: 1rem;
     border:.7rem solid var(--yellow);
+    /* border-left-color:rgb(65, 58, 58) ;
+    border-bottom-color:rgb(65, 58, 58) ; */
+    animation-name: slidein;
+    animation-duration:1s;
+  animation-delay: 5s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
 }
 
 header .user .name{
     font-size: 3.9rem;
-    color:#fff;
+    color:rgb(65, 58, 58);
 }
 
 header .user .post{
     font-size: 2.5rem;
-    color:#eee;
+    color:rgb(65, 58, 58);
 }
 
 header .navbar{
@@ -118,18 +162,29 @@ header .navbar{
 
 header .navbar ul{
     list-style: none;
-    padding:1rem 3rem;
+    padding:1rem;
+   
 }
 
 
 header .navbar ul li a{
     display: block;
     padding:1rem;
-    margin:1.5rem 0;
-    background:#333;
-    color:#fff;
+    margin:1.5rem 2rem;
+    background:rgb(65, 58, 58);
+    color:rgb(255, 255, 255);
     font-size: 2rem;
-    border-radius: 5rem;
+    border:1px var(--yellow);
+    border-style:double;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    animation-name: example;
+  animation-duration:5s;
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+    /* border-radius: 5rem; */
 }
 
 header .navbar ul li a:hover{
@@ -294,8 +349,8 @@ header .navbar ul li a:hover{
 }
 
 .portfolio .box-container .box img{
-    height:100%;
-    width:100%;
+    height:20rem;
+    width:20rem;
     object-fit: cover;
 }
 
@@ -369,22 +424,6 @@ header .navbar ul li a:hover{
     z-index: 100;
     display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
