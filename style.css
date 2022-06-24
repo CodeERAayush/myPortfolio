@@ -55,6 +55,8 @@ body{
     margin-right: 1rem;
     bottom: 2px;
     right: 2px;
+    transition-property: transform;
+    transition-duration: 500ms;
     
 }
 #chat:hover{
@@ -103,7 +105,7 @@ header{
     z-index: 1000;
     height:100%;
     width:35rem;
-    background:#e0bfbf;
+    background:#f1bfbf;
     
      /* background-image: url(backgrd1.jpg); */
      background-blend-mode: darken;
@@ -116,15 +118,15 @@ header{
 @keyframes slidein {
     from {
         border-left-color:var(--yellow);
-        border-bottom-color:var(--yellow) ;
-        border-right-color:rgb(65, 58, 58) ;
+        border-bottom-color:rgb(65, 58, 58) ;
+        border-right-color:var(--yellow) ;
         border-top-color:rgb(65, 58, 58) ;
     }
   
     to {
         border-left-color:rgb(65, 58, 58) ;
-        border-bottom-color:rgb(65, 58, 58) ;
-        border-right-color:var(--yellow);
+        border-bottom-color:var(--yellow) ;
+        border-right-color:rgb(65, 58, 58);
         border-top-color:var(--yellow);
     }
   }
@@ -179,6 +181,8 @@ header .navbar ul li a{
     border-top-left-radius: 5rem;
     border-bottom-left-radius: 5rem;
     border-bottom-right-radius: 5rem;
+    transition-property: all;
+    transition-duration: 500ms;
     animation-name: example;
   animation-duration:5s;
   animation-delay: 100ms;
@@ -189,6 +193,8 @@ header .navbar ul li a{
 
 header .navbar ul li a:hover{
     background:var(--yellow);
+    transform: scale(0.8);
+    border-top-right-radius: 5rem;
 }
 
 #menu{
