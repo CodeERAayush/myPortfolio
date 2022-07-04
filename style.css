@@ -345,11 +345,16 @@ header .navbar ul li a:hover{
     flex-direction: row;
     justify-content: center;
     /* align-items: center; */
-    border:1.5px solid red;
+    border:1.5px solid red; 
     border-color: var(--yellow);
     border-top-left-radius: 5rem;
     border-bottom-left-radius: 5rem;
     border-bottom-right-radius: 5rem;
+}
+.about-item:hover{
+    transform: translateY(-5px);
+  border: 1px solid var(--yellow);
+  box-shadow: 1px 4px 15px rgba(207, 155, 155, 0.493);
 }
 .about-item .abt-text{
     display: inline;
